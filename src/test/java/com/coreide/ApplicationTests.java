@@ -46,7 +46,7 @@ class ApplicationTests {
 
 	@Test
 	void createCustomer(){
-		Customer customer = new Customer("Saurav", "Kumar", "saurav@wipro.com");
+		Customer customer = new Customer("Saurav", "Kumar", "saurav@coreide.com");
 		customer = customerService.addCustomer(customer);
 		customer = customerService.findCustomerById(customer.getCustomerId());
 		Assert.notNull(customer, "Failed to create");
@@ -54,7 +54,7 @@ class ApplicationTests {
 
 	@Test
 	void createCustomerAccount(){
-		Customer customer = new Customer("Saurav", "Kumar", "saurav@wipro.com");
+		Customer customer = new Customer("Saurav", "Kumar", "saurav@coreide.com");
 		customer = customerService.addCustomer(customer);
 		Account account = new Account(AccountType.Savings, 100d);
 		account = customerService.addAccount(account, customer.getCustomerId());
